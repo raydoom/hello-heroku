@@ -6,7 +6,7 @@ cp -r /opt/sh/localhost.localdomain/* /etc/nginx/http.d/certs
 
 # start nginx
 nginx
-echo '\$UUID'
+echo ${UUID}
 # start v2ray
 sed -i "s/uuid/${uuid}/g" /etc/v2ray/config.json
 nohup v2ray --config /etc/v2ray/config.json > /var/log/v2ray.log 2>&1 &
